@@ -48,7 +48,7 @@ function createUser(email, password){
 function changeAvailability(num){
     var value = ''
     if(portAvailability[num-1] == 'empty'){
-        value = 'notempty'
+        value = 'please enter a sensor type'
     }else{
         value = 'empty'
     }
