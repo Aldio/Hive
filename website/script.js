@@ -1,6 +1,8 @@
 
 var ref = new Firebase('https://hiveio.firebaseio.com/');
-createUser('rohan@techlabeducation.com', 'jenga')
+
+
+createUser('rohan@techlabeducation.com', 'jenga') //this should be called from html when a button is pressed or something
 
 function createUser(email, password){
     var newEmail = replacePeriods(email)

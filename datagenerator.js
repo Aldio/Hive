@@ -1,6 +1,7 @@
 var Firebase = require('firebase');
 var ref = new Firebase('https://hiveio.firebaseio.com/');
-var user = 'riyer' //changes based on user input
+var user = 'rohan@techlabeducation.com' //changes based on user input
+user = replacePeriods(user)
 var sensorPorts = 4
 var portValues = []
 var portAvailability = [] //true means available , false means not available
@@ -45,5 +46,7 @@ setInterval(function(){
 
 }, 500)
 
-
+function replacePeriods(email){
+    return email.replace(/\./g,'*')
+}
 
