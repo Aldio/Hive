@@ -7,20 +7,7 @@ var portAvailability = [] //true means available , false means not available
 
 checkPortAvailability()
 
-createUser()
 
-function createUser(){
-    myFirebaseRef.createUser({
-        email    : "rohan@techlabeducation.com",
-        password : "jenga"
-    }, function(error, userData) {
-        if (error) {
-            console.log("Error creating user:", error);
-        } else {
-            console.log("Successfully created user account with uid:", userData.uid);
-        }
-    });
-}
 
 function checkPortAvailability(){
 
@@ -41,7 +28,7 @@ function checkPortAvailability(){
 }
 
 setInterval(function(){
-        
+
     for(var j = 0; j < sensorPorts; j++){
         if(portAvailability[j]){
             portValues[j] = Math.random() * 1000 //insert legitimate value of port1 from sensor here
@@ -55,7 +42,7 @@ setInterval(function(){
             value: portValues[i]    
         })
     }
-                                                     
+
 }, 500)
 
 
