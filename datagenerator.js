@@ -12,10 +12,10 @@ checkPortAvailability()
 
 function checkPortAvailability(){
 
-    ref.child("users").child(user).child('ports').on("value", function(snapshot) {
+    ref.child('users').child(user).child('ports').on("value", function(snapshot) {
         var index = 0
         snapshot.forEach(function(childSnapshot){
-            console.log(childSnapshot.child('type').val())
+            //console.log(childSnapshot.child('type').val())
             if(childSnapshot.child('type').val() == 'empty'){
                 portAvailability[index] = false
             }else{
@@ -32,7 +32,7 @@ setInterval(function(){
 
     for(var j = 0; j < sensorPorts; j++){
         if(portAvailability[j]){
-            portValues[j] = Math.random() * 1000 //insert legitimate value of port1 from sensor here
+            portValues[j] = Math.random() * 1000 //insert legitimate value of port[j] from sensor here
         }else{
             portValues[j] = 'empty'
         }
