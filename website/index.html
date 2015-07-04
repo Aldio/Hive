@@ -3,17 +3,67 @@
 	<title>Hive by Aldio</title>
 	<script src="https://cdn.firebase.com/js/client/2.2.7/firebase.js"></script>
 	<script type="text/javascript" src = "script.js" ></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-	
+
 </head>
 <body>
-	<input type = "checkbox" id = "checkbox_id" onchange = "changeAvailability(1)" value = "foo">
 
-	<input type = "checkbox" id = "checkbox_id" onchange = "changeAvailability(2)" value = "foo">
+	<table>
+		<tr>
+			<td id="loginform">
 
-	<input type = "checkbox" id = "checkbox_id" onchange = "changeAvailability(3)" value = "foo">
+					Log in: <br>
+					Username:<br>
+					<input type="text" id = "username1" name="user">
+					<br>
+					Password:<br>
+					<input type="text" id = "password1" name="pass">
+					<br>
+					<input type="submit" onclick = "" value="Log In">
 
-	<input type = "checkbox" id = "checkbox_id" onchange = "changeAvailability(4)" value = "foo">
+			</td>
+			<td id="signupform">
+
+					Sign up: <br>
+					Username:<br>
+					<input type="text" id = "username2" name="user">
+					<br>
+					Password:<br>
+					<input type="text" id = "password2" name="pass">
+					<br>
+					<input type="submit" onclick = "createUser(document.getElementById('username2').value.toString(), document.getElementById('password2').value.toString())" value="Sign Up">
+
+			</td>
+			<td id="deleteform">
+
+					Delete Account: <br>
+					Username:<br>
+					<input type="text" id = "username3" name="user">
+					<br>
+					Password:<br>
+					<input type="text" id = "password3" name="pass">
+					<br>
+					<input type="submit" onclick = "deleteUser(document.getElementById('username3').value.toString(), document.getElementById('password3').value.toString())" value="Delete">
+
+			</td>
+		</tr>
+	</table>
+
+	<ul id = "checkboxes">
+		<li>
+			<input type = "checkbox" id = "checkbox_id" onchange = "changeAvailability(1)" value = "foo">
+		</li>
+		<li>
+			<input type = "checkbox" id = "checkbox_id" onchange = "changeAvailability(2)" value = "foo">
+		</li>
+		<li>
+			<input type = "checkbox" id = "checkbox_id" onchange = "changeAvailability(3)" value = "foo">
+		</li>
+		<li>
+			<input type = "checkbox" id = "checkbox_id" onchange = "changeAvailability(4)" value = "foo">
+		</li>
+	</ul>
 
 </body>
 </html>
